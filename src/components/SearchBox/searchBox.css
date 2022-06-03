@@ -1,0 +1,18 @@
+.searchBox{
+    padding: 4px 0;
+    height: 32px;
+    width: 100%;
+    border: 1px solid grey ;
+}  
+
+.searchBoxInput{
+    height: 100%;
+    width: 80%;
+    border: none;
+    outline: none;
+    padding: 0 8px;
+    }
+
+.searchBoxInput:active, .searchBoxInput:hover{
+    border:  none;
+}

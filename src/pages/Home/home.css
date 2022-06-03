@@ -1,0 +1,82 @@
+.home{
+    padding: 0 5rem;
+    background-color: #fff;
+}
+
+.titleCon{
+    padding-bottom: .5rem;
+}
+
+.title{
+    color: black;
+    font-size: 48px;
+}
+
+.filterCon{
+    display: flex;
+    flex-direction: row;
+}
+
+.filterBox{
+    padding: 4px;
+    border: 1px solid grey;
+    margin-right: 2rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.active{
+    background: black;
+    color: white;
+}
+
+.filterBox:hover{
+    background: black;
+    color: white;
+}
+
+.searchloaderCon{
+    min-height: 2rem;
+}
+
+.searchloader{
+    color:  rgb(78, 78, 88)
+}
+
+.contentCon{
+    padding: 3rem 0;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     gap: 24px ;
+}
+
+@media screen and (max-width: 978px) {
+    .contentCon{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home{
+        padding: 0 1rem;
+    }
+    .contentCon{
+        grid-template-columns: 1fr;
+    }
+}
+
+.loader{
+    display: grid;
+    place-items: center;
+    font-size: 48px;
+    width: 100%;
+    height: 100vh;
+}
+
+.nodata{
+    display: grid;
+    place-items: center;
+    font-size: 48px;
+    width: 80vw;
+    height: 60vh;
+}
