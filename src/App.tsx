@@ -11,7 +11,7 @@ function App() {
     <BlogContextProvider>
     <BrowserRouter>
         <Routes>
-        <Route path="/home" element={<Home />}/>
+        <Route path="/" element={<Home />}/>
         <Route path="/blog/:id" element={<SingleBlog />}/>
         </Routes>
     </BrowserRouter>
