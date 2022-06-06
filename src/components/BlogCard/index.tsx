@@ -2,8 +2,7 @@ import React from 'react'
 import './blogCard.css'
 import { useUsers } from '../../context/UserContextProvider'
 import { useNavigate } from 'react-router-dom'
-
-
+import outsideLink from "../../assets/outsideLink.png"
 interface BlogCardInterface{
 userId: number
 title: string
@@ -30,6 +29,7 @@ const BlogCard = ({title, userId, postId}: BlogCardInterface) => {
                         {title}
                       </span>
               </div>
+              <img width={30} src={outsideLink} alt="link" className='outsideLink'/>
     </div>
   )
 }
