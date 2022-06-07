@@ -25,6 +25,7 @@ const BlogCard = ({title, userId, postId}: BlogCardInterface) => {
                       <span className="blogAuthor">
                        By  {getUserDetails?.(userId)?.username}
                       </span>
+                      <span className="blogEmail">{getUserDetails?.(userId)?.email}</span>
                       <span className="blogTitle">
                         {title}
                       </span>

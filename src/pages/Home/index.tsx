@@ -5,6 +5,7 @@ import BlogCard from "../../components/BlogCard";
 import SearchBox from "../../components/SearchBox";
 import { useBlogs } from "../../context/BlogContextProvider";
 import { useUsers } from "../../context/UserContextProvider";
+import pullDown from "../../assets/pullDown.png"
 import "./home.css";
 
 type KeyboardEventHTML = React.KeyboardEvent<HTMLInputElement>;
@@ -13,7 +14,7 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const [isSearching, setIsSearching] = useState(false);
   const [currOrder, setCurrOrder] = useState("default");
-
+  const [filterDropOpen, setFilterDropOpen] = useState(false)
   const { blogs, updateBlogs } = useBlogs();
   const { updateUsers, getUserDetails } = useUsers();
 
@@ -100,7 +101,13 @@ const Home = () => {
       <div className="searchloaderCon">
         {isSearching && <span className="searchloader">searching...</span>}
       </div>
-      <div className="filterCon">
+      <div className="controlCon"
+      onClick={()=>setFilterDropOpen(!filterDropOpen)}
+      >
+        <span>Filter Blogs </span>
+        <img alt="filterBtn" src={pullDown} width={30}/>
+      </div>
+      <div className={`${!filterDropOpen ? `filterCon` : `filterConOpen`}`}>
         <div
           className={`filterBox ${currOrder === "name" && `active`}`}
           onClick={() => orderByUsername()}

@@ -40,12 +40,19 @@ z-index: 2;
     z-index: 3;
 }
 
-.blogAuthor{
-    padding: 1rem 0;
+.blogAuthor {
+    padding: 0;
     font-weight: 200;
     font-family: cursive;
     text-align: center;
-}
+  }
+  
+  .blogEmail {
+    padding: 0 0 1rem;
+    font-weight: 200;
+    font-family: cursive;
+    text-align: center;
+  }
 
 .blogTitle{
     text-align: center;
